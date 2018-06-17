@@ -176,7 +176,7 @@ public class GoodsServiceImpl implements GoodsService {
 	
 	/**
 	 * 根据ID获取实体
-	 * @param id
+	 * @param
 	 * @return
 	 */
 	@Override
