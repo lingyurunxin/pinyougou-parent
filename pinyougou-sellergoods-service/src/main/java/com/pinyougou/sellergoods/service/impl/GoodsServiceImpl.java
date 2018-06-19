@@ -176,7 +176,7 @@ public class GoodsServiceImpl implements GoodsService {
 	
 	/**
 	 * 根据ID获取实体
-	 * @param
+	 * @param id
 	 * @return
 	 */
 	@Override
@@ -209,7 +209,6 @@ public class GoodsServiceImpl implements GoodsService {
 			TbGoods goods = goodsMapper.selectByPrimaryKey(id);
 			goods.setIsDelete("1");//表示逻辑删除
 			goodsMapper.updateByPrimaryKey(goods);
-
 		}		
 	}
 	
