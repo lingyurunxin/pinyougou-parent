@@ -17,6 +17,9 @@
             <artifactId>pinyougou-pojo</artifactId>
             <version>0.0.5-SNAPSHOT</version>
         </dependency>
+
+
+
     </dependencies>
 
 </project>
