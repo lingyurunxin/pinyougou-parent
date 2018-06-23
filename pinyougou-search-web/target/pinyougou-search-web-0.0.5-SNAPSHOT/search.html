@@ -368,7 +368,7 @@
 											<i>{{item.price}}</i>
 										</strong>
 								</div>
-								<div class="attr">
+								<div class="attr" ng-bind-html="item.title |trustHtml">
 									<em>{{item.title}}</em>
 								</div>
 								<div class="cu">

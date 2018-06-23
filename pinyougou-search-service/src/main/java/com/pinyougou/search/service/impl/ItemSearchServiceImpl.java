@@ -51,16 +51,16 @@ public class ItemSearchServiceImpl implements ItemSearchService {
                  ) {
                 List<String> sns = h.getSnipplets();
                 System.out.println(sns);
-            }*/
+            }
+            */
             if (highlights.size()>0&&highlights.get(0).getSnipplets().size()>0){
                 TbItem item = entry.getEntity();
                 item.setTitle(highlights.get(0).getSnipplets().get(0));
             }
 
-
         }
 
-        map.put("ros", page.getContent());
+        map.put("rows", page.getContent());
         return map;
     }
 
