@@ -86,6 +86,11 @@
   		<artifactId>pinyougou-search-interface</artifactId>
   		<version>0.0.3-SNAPSHOT</version>
   	</dependency>
+  	<dependency>
+  		<groupId>com.pinyougou</groupId>
+  		<artifactId>pinyougou-common</artifactId>
+  		<version>0.0.3-SNAPSHOT</version>
+  	</dependency>
   </dependencies>
   
   

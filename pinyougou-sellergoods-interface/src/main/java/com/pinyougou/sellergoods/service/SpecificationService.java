@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.pinyougou.pojo.TbSpecification;
-import com.pinyougou.pojogroup.Specification;
+import com.pinyougou.pojo.group.Specification;
 
 import entity.PageResult;
 /**
@@ -51,7 +51,7 @@ public interface SpecificationService {
 	 * 批量删除
 	 * @param ids
 	 */
-	public void delete(Long [] ids);
+	public void delete(Long[] ids);
 
 	/**
 	 * 分页
@@ -61,7 +61,5 @@ public interface SpecificationService {
 	 */
 	public PageResult findPage(TbSpecification specification, int pageNum,int pageSize);
 	
-	
 	public List<Map> selectOptionList();
-	
 }

@@ -60,7 +60,6 @@ public interface TypeTemplateService {
 	 */
 	public PageResult findPage(TbTypeTemplate typeTemplate, int pageNum,int pageSize);
 	
-
+	//根据模板ID查询规格列表
 	public List<Map> findSpecList(Long id);
-	
 }

@@ -1,8 +1,6 @@
 package com.pinyougou.pojo;
 
-import java.io.Serializable;
-
-public class TbProvinces implements Serializable{
+public class TbProvinces {
     private Integer id;
 
     private String provinceid;

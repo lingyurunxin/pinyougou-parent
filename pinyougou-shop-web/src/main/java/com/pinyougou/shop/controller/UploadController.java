@@ -9,29 +9,33 @@ import entity.Result;
 import util.FastDFSClient;
 
 @RestController
+@RequestMapping("/upload")
 public class UploadController {
 	
 	@Value("${FILE_SERVER_URL}")
 	private String file_server_url;
-
-	@RequestMapping("/upload")
-	public Result upload(MultipartFile file){
-		
-		String originalFilename = file.getOriginalFilename();//获取文件名
-		String extName=originalFilename.substring( originalFilename.lastIndexOf(".")+1);//得到扩展名
+	
+	@RequestMapping("/uploadFile")
+	public Result uploadFile(MultipartFile file){
 		
 		try {
-			util.FastDFSClient client=new FastDFSClient("classpath:config/fdfs_client.conf");
-			String fileId = client.uploadFile(file.getBytes(), extName);
-			String url=file_server_url+fileId;//图片完整地址
-			return new Result(true, url);
+			// 获得文件名:
+			String fileName = file.getOriginalFilename();
+			// 获得文件的扩展名:
+			String extName = fileName.substring( fileName.lastIndexOf(".")+1 );
+			// 创建工具类
+			util.FastDFSClient client = new FastDFSClient("classpath:fastDFS/fdfs_client.conf");
 			
+			String path = client.uploadFile(file.getBytes(), extName); // group1/M00/
+			
+			String url = file_server_url + path;
+			
+			return new Result(true, url);
 		} catch (Exception e) {
 			e.printStackTrace();
-			return new Result(false, "上传失败");
+			return new Result(false, "上传失败！");
 		}
 		
+		
 	}
-	
-	
 }

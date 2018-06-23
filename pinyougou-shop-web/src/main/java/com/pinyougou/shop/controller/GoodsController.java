@@ -5,9 +5,10 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.pinyougou.pojo.TbGoods;
-import com.pinyougou.pojogroup.Goods;
+import com.pinyougou.pojo.group.Goods;
 import com.pinyougou.sellergoods.service.GoodsService;
 
 import entity.PageResult;
@@ -50,11 +51,12 @@ public class GoodsController {
 	 */
 	@RequestMapping("/add")
 	public Result add(@RequestBody Goods goods){
-		//获取商家ID
-		String sellerId = SecurityContextHolder.getContext().getAuthentication().getName();
-		goods.getGoods().setSellerId(sellerId);//设置商家ID
-		
 		try {
+			// 获得商家信息:
+			String sellerId = SecurityContextHolder.getContext().getAuthentication().getName();
+			
+			goods.getGoods().setSellerId(sellerId);
+			
 			goodsService.add(goods);
 			return new Result(true, "增加成功");
 		} catch (Exception e) {
@@ -70,14 +72,13 @@ public class GoodsController {
 	 */
 	@RequestMapping("/update")
 	public Result update(@RequestBody Goods goods){
-		//当前商家ID
+		// 获得商家信息:
 		String sellerId = SecurityContextHolder.getContext().getAuthentication().getName();
 		
-		//首先判断商品是否是该商家的商品 
 		Goods goods2 = goodsService.findOne(goods.getGoods().getId());
-		if(!goods2.getGoods().getSellerId().equals(sellerId) || !goods.getGoods().getSellerId().equals(sellerId) ){
+		if(!sellerId.equals(goods2.getGoods().getSellerId()) || !sellerId.equals(goods.getGoods().getSellerId())){
 			return new Result(false, "非法操作");
-		}		
+		}
 		
 		try {
 			goodsService.update(goods);
@@ -123,9 +124,10 @@ public class GoodsController {
 	 */
 	@RequestMapping("/search")
 	public PageResult search(@RequestBody TbGoods goods, int page, int rows  ){
-		//获取商家ID
+		
 		String sellerId = SecurityContextHolder.getContext().getAuthentication().getName();
 		goods.setSellerId(sellerId);
+		
 		return goodsService.findPage(goods, page, rows);		
 	}
 	

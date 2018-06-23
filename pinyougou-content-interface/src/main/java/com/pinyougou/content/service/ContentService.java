@@ -1,5 +1,6 @@
 package com.pinyougou.content.service;
 import java.util.List;
+
 import com.pinyougou.pojo.TbContent;
 
 import entity.PageResult;
@@ -59,9 +60,7 @@ public interface ContentService {
 	public PageResult findPage(TbContent content, int pageNum,int pageSize);
 	
 	/**
-	 * 根据广告分类ID查询广告列表
-	 * @param categoryId
-	 * @return
+	 * 根据广告分类ID查询广告
 	 */
 	public List<TbContent> findByCategoryId(Long categoryId);
 	

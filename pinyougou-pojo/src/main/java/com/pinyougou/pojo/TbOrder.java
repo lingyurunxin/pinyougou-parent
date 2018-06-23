@@ -1,10 +1,9 @@
 package com.pinyougou.pojo;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class TbOrder implements Serializable{
+public class TbOrder {
     private Long orderId;
 
     private BigDecimal payment;

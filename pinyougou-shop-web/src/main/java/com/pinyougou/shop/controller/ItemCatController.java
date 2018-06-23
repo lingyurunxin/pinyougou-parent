@@ -111,15 +111,8 @@ public class ItemCatController {
 		return itemCatService.findPage(itemCat, page, rows);		
 	}
 	
-	/**
-	 * 根据上级ID查询商品分类列表
-	 * @param parentId
-	 * @return
-	 */
 	@RequestMapping("/findByParentId")
 	public List<TbItemCat> findByParentId(Long parentId){
 		return itemCatService.findByParentId(parentId);
 	}
-	
-	
 }

@@ -38,7 +38,7 @@ public class SellerController {
 	 * @return
 	 */
 	@RequestMapping("/findPage")
-	public PageResult  findPage(int page,int rows){			
+	public PageResult findPage(int page,int rows){			
 		return sellerService.findPage(page, rows);
 	}
 	
@@ -49,12 +49,11 @@ public class SellerController {
 	 */
 	@RequestMapping("/add")
 	public Result add(@RequestBody TbSeller seller){
-		//密码加密
-		BCryptPasswordEncoder passwordEncoder=new BCryptPasswordEncoder();
-		String password = passwordEncoder.encode(seller.getPassword());//加密
-		seller.setPassword(password);
-		
 		try {
+			
+			BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+			seller.setPassword(passwordEncoder.encode(seller.getPassword()));
+			
 			sellerService.add(seller);
 			return new Result(true, "增加成功");
 		} catch (Exception e) {

@@ -115,12 +115,11 @@ public class SellerController {
 	public Result updateStatus(String sellerId,String status){
 		try {
 			sellerService.updateStatus(sellerId, status);
-			return new Result(true, "成功");
+			return new Result(true, "审核状态成功"); 
 		} catch (Exception e) {
 			e.printStackTrace();
-			return new Result(false, "失败");
+			return new Result(false, "审核状态失败");
 		}
-		
 	}
 	
 }

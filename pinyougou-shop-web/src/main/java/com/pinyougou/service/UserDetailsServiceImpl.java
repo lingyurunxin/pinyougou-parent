@@ -1,7 +1,6 @@
 package com.pinyougou.service;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import org.springframework.security.core.GrantedAuthority;
@@ -13,14 +12,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import com.pinyougou.pojo.TbSeller;
 import com.pinyougou.sellergoods.service.SellerService;
-/**
- * 认证类
- * @author Administrator
- *
- */
+
 public class UserDetailsServiceImpl implements UserDetailsService {
 
-	
 	private SellerService sellerService;
 	
 	public void setSellerService(SellerService sellerService) {
@@ -29,22 +23,27 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		System.out.println("经过了UserDetailsServiceImpl");
-		//构建角色列表
-		List<GrantedAuthority> grantAuths=new ArrayList();
-		grantAuths.add(new SimpleGrantedAuthority("ROLE_SELLER"));
 		
-		//得到商家对象
+		List<GrantedAuthority> grantAuths = new ArrayList();
+		grantAuths.add(new SimpleGrantedAuthority("ROLE_SELLER"));
+		/**
+		 * User:
+		 * * 参数：
+		 * 	* 1.用户名
+		 *  * 2.密码
+		 *  * 3.认证信息（角色）
+		 */
+		// 去数据库进行查询:
 		TbSeller seller = sellerService.findOne(username);
-		if(seller!=null){
+		if(seller != null){
 			if(seller.getStatus().equals("1")){
-				return new User(username,seller.getPassword(),grantAuths);
+				return new User(username,seller.getPassword(),grantAuths );
 			}else{
 				return null;
-			}			
-		}else{
-			return null;
+			}
 		}
+		return null;
+		
 	}
 
 }

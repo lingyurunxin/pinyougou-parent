@@ -89,8 +89,6 @@
     from tb_type_template
     where id = #{id,jdbcType=BIGINT}
   </select>
-
-  
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from tb_type_template
     where id = #{id,jdbcType=BIGINT}

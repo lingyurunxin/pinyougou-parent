@@ -1,9 +1,8 @@
 package com.pinyougou.pojo;
 
-import java.io.Serializable;
 import java.util.Date;
 
-public class TbAddress implements Serializable{
+public class TbAddress {
     private Long id;
 
     private String userId;

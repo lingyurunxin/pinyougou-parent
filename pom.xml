@@ -2,9 +2,24 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.pinyougou</groupId>
   <artifactId>pinyougou-parent</artifactId>
-  <version>0.0.5-SNAPSHOT</version>
+  <version>0.0.3-SNAPSHOT</version>
   <packaging>pom</packaging>
-  
+  <modules>
+  	<module>pinyougou-pojo</module>
+  	<module>pinyougou-dao</module>
+  	<module>pinyougou-common</module>
+  	<module>pinyougou-sellergoods-interface</module>
+  	<module>pinyougou-sellergoods-service</module>
+  	<module>pinyougou-manager-web</module>
+  	<module>pinyougou-shop-web</module>
+  	<module>pinyougou-content-interface</module>
+  	<module>pinyougou-content-service</module>
+  	<module>pinyougou-portal-web</module>
+  	<module>pinyougou-solr-util</module>
+  	<module>pinyougou-search-interface</module>
+  	<module>pinyougou-search-service</module>
+  	<module>pinyougou-search-web</module>
+  </modules>
   
   	<!-- 集中定义依赖版本号 -->
 	<properties>
@@ -273,18 +288,4 @@
 		</plugins>
 	
 	</build>
-  
-	<modules>
-		<module>pinyougou-pojo</module>
-		<module>pinyougou-dao</module>
-		<module>pinyougou-common</module>
-		<module>pinyougou-sellergoods-interface</module>
-		<module>pinyougou-sellergoods-service</module>
-		<module>pinyougou-manager-web</module>
-		<module>pinyougou-shop-web</module>
-		<module>pinyougou-content-interface</module>
-		<module>pinyougou-content-service</module>
-		<module>pinyougou-portal-web</module>
-        <module>pinyougou-solr-util</module>
-    </modules>
 </project>

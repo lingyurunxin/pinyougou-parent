@@ -4,9 +4,10 @@ import java.util.List;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.pinyougou.pojo.TbGoods;
-import com.pinyougou.pojogroup.Goods;
+import com.pinyougou.pojo.group.Goods;
 import com.pinyougou.sellergoods.service.GoodsService;
 
 import entity.PageResult;
@@ -42,7 +43,21 @@ public class GoodsController {
 		return goodsService.findPage(page, rows);
 	}
 	
-
+	/**
+	 * 增加
+	 * @param goods
+	 * @return
+	 */
+	@RequestMapping("/add")
+	public Result add(@RequestBody Goods goods){
+		try {
+			goodsService.add(goods);
+			return new Result(true, "增加成功");
+		} catch (Exception e) {
+			e.printStackTrace();
+			return new Result(false, "增加失败");
+		}
+	}
 	
 	/**
 	 * 修改
@@ -86,7 +101,7 @@ public class GoodsController {
 		}
 	}
 	
-		/**
+	/**
 	 * 查询+分页
 	 * @param brand
 	 * @param page
@@ -99,14 +114,14 @@ public class GoodsController {
 	}
 	
 	@RequestMapping("/updateStatus")
-	public Result updateStatus(Long[] ids, String status){
+	public Result updateStatus(Long[] ids,String status){
 		try {
 			goodsService.updateStatus(ids, status);
-			return new Result(true, "成功");
+			return new Result(true, "修改状态成功"); 
 		} catch (Exception e) {
 			e.printStackTrace();
-			return new Result(false, "失败");
-		}		
+			return new Result(false, "修改状态失败");
+		}
 	}
 	
 }
