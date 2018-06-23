@@ -3,18 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="af84190a-4672-4266-8ef8-408529599be4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pinyougou-search-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pinyougou-search-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pinyougou-search-service/src/main/java/com/pinyougou/search/service/impl/ItemSearchServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pinyougou-search-service/src/main/java/com/pinyougou/search/service/impl/ItemSearchServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pinyougou-search-service/target/classes/com/pinyougou/search/service/impl/ItemSearchServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/pinyougou-search-service/target/classes/com/pinyougou/search/service/impl/ItemSearchServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pinyougou-search-service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/pinyougou-search-service/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pinyougou-search-service/target/pinyougou-search-service-0.0.5-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/pinyougou-search-service/target/pinyougou-search-service-0.0.5-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pinyougou-search-service/target/pinyougou-search-service-0.0.5-SNAPSHOT/WEB-INF/classes/com/pinyougou/search/service/impl/ItemSearchServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/pinyougou-search-service/target/pinyougou-search-service-0.0.5-SNAPSHOT/WEB-INF/classes/com/pinyougou/search/service/impl/ItemSearchServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pinyougou-search-web/src/main/webapp/js/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/pinyougou-search-web/src/main/webapp/js/base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pinyougou-search-web/src/main/webapp/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/pinyougou-search-web/src/main/webapp/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pinyougou-search-web/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/pinyougou-search-web/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pinyougou-search-web/target/pinyougou-search-web-0.0.5-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/pinyougou-search-web/target/pinyougou-search-web-0.0.5-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pinyougou-search-web/target/pinyougou-search-web-0.0.5-SNAPSHOT/js/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/pinyougou-search-web/target/pinyougou-search-web-0.0.5-SNAPSHOT/js/base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pinyougou-search-web/target/pinyougou-search-web-0.0.5-SNAPSHOT/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/pinyougou-search-web/target/pinyougou-search-web-0.0.5-SNAPSHOT/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pinyougou-search-web/target/tomcat/logs/access_log.2018-06-21" beforeDir="false" afterPath="$PROJECT_DIR$/pinyougou-search-web/target/tomcat/logs/access_log.2018-06-21" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/pinyougou-sellergoods-interface/target/" />
     <ignored path="$PROJECT_DIR$/pinyougou-manager-web/target/" />
@@ -66,8 +56,38 @@
       <file leaf-file-name="ItemSearchServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pinyougou-search-service/src/main/java/com/pinyougou/search/service/impl/ItemSearchServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="48" column="14" lean-forward="true" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+            <state relative-caret-position="377">
+              <caret line="42" column="40" lean-forward="true" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext-service.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pinyougou-search-service/src/main/resources/spring/applicationContext-service.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext-solr.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pinyougou-search-service/src/main/resources/spring/applicationContext-solr.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pinyougou-search-service/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1898">
+              <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -117,11 +137,11 @@
         <option value="$PROJECT_DIR$/pinyougou-pojo/src/main/java/com/pinyougou/pojo/TbItem.java" />
         <option value="$PROJECT_DIR$/pinyougou-solr-util/src/main/java/com/pinyougou/solrutil/SolrUtil.java" />
         <option value="$PROJECT_DIR$/pinyougou-search-interface/pom.xml" />
-        <option value="$PROJECT_DIR$/pinyougou-search-service/pom.xml" />
         <option value="$PROJECT_DIR$/pinyougou-search-web/pom.xml" />
         <option value="$PROJECT_DIR$/pinyougou-search-web/src/main/webapp/js/base.js" />
         <option value="$PROJECT_DIR$/pinyougou-search-web/src/main/webapp/search.html" />
         <option value="$PROJECT_DIR$/pinyougou-search-service/src/main/java/com/pinyougou/search/service/impl/ItemSearchServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pinyougou-search-service/pom.xml" />
       </list>
     </option>
   </component>
@@ -266,6 +286,23 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pinyougou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pinyougou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="pinyougou-search-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pinyougou-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pinyougou-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="pinyougou-search-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pinyougou-parent" type="b2602c69:ProjectViewProjectNode" />
@@ -697,7 +734,7 @@
       <workItem from="1529392794164" duration="39716000" />
       <workItem from="1529591506963" duration="780000" />
       <workItem from="1529632247176" duration="2446000" />
-      <workItem from="1529718678897" duration="319000" />
+      <workItem from="1529718678897" duration="5019000" />
     </task>
     <servers />
   </component>
@@ -734,10 +771,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43261000" />
+    <option name="totallyTimeSpent" value="47961000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="6" />
@@ -1021,20 +1058,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pinyougou-search-service/src/main/resources/spring/applicationContext-service.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="70" selection-start-line="13" selection-start-column="70" selection-end-line="13" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinyougou-search-service/src/main/resources/spring/applicationContext-solr.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pinyougou-search-service/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -1067,13 +1090,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinyougou-search-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="85" column="50" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -1126,13 +1142,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pinyougou-search-web/src/main/webapp/js/controller/searchController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pinyougou-search-web/src/main/webapp/search.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9250">
@@ -1140,10 +1149,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pinyougou-search-web/src/main/webapp/js/controller/searchController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinyougou-search-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1898">
+          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinyougou-search-service/src/main/resources/spring/applicationContext-solr.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinyougou-search-service/src/main/resources/spring/applicationContext-service.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pinyougou-search-service/src/main/java/com/pinyougou/search/service/impl/ItemSearchServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="48" column="14" lean-forward="true" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+        <state relative-caret-position="377">
+          <caret line="42" column="40" lean-forward="true" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
