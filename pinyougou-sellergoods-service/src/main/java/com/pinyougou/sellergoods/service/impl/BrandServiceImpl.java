@@ -16,7 +16,7 @@ import com.pinyougou.pojo.TbBrandExample.Criteria;
 import com.pinyougou.sellergoods.service.BrandService;
 
 import entity.PageResult;
-@Service
+@Service(timeout = 5000)
 @Transactional
 public class BrandServiceImpl implements BrandService {
 	

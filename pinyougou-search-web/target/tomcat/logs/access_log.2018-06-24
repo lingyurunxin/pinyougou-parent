@@ -1,0 +1,5 @@
+0:0:0:0:0:0:0:1 - - [24/Jun/2018:09:56:34 +0800] "GET / HTTP/1.1" 200 23502 http-bio-9104-exec-1 59
+0:0:0:0:0:0:0:1 - - [24/Jun/2018:09:56:34 +0800] "GET /js/base.js HTTP/1.1" 200 292 http-bio-9104-exec-5 8
+0:0:0:0:0:0:0:1 - - [24/Jun/2018:09:56:34 +0800] "GET /%7B%7Bitem.image%7D%7D HTTP/1.1" 404 995 http-bio-9104-exec-2 7
+0:0:0:0:0:0:0:1 - - [24/Jun/2018:09:56:35 +0800] "GET /assets/img/favicon.ico HTTP/1.1" 404 995 http-bio-9104-exec-7 3
+0:0:0:0:0:0:0:1 - - [24/Jun/2018:09:57:00 +0800] "POST /itemsearch/search.do HTTP/1.1" 500 4664 http-bio-9104-exec-8 14041
