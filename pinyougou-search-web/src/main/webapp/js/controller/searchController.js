@@ -28,7 +28,7 @@ app.controller('searchController',function($scope,$location,searchService){
         if($scope.resultMap.totalPages>5){  //如果页码数量大于5
 
             if($scope.searchMap.pageNo<=3){//如果当前页码小于等于3 ，显示前5页
-                lastPage=5; 
+                lastPage=5;    
                 $scope.firstDot=false;//前面没点
             }else if( $scope.searchMap.pageNo>= $scope.resultMap.totalPages-2 ){//显示后5页
                 firstPage=$scope.resultMap.totalPages-4;
