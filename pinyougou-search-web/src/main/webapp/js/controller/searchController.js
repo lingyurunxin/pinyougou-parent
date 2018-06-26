@@ -1,7 +1,7 @@
 app.controller('searchController',function($scope,$location,searchService){
 
     //定义搜索对象的结构  category:商品分类
-    $scope.searchMap={'keywords':' ','category':' ','brand':' ','spec':{},'price':' ','pageNo':1,'pageSize':40,'sort': ' ','sortField':' '};
+    $scope.searchMap={'keywords':' ','category':' ','brand':' ','spec':{},'price':' ','pageNo':1,'pageSize':40,'sort':' ','sortField':' '};
 
     //搜索
     $scope.search=function(){
@@ -43,7 +43,7 @@ app.controller('searchController',function($scope,$location,searchService){
         }
 
 
-        //构建页码  
+        //构建页码
         for(var i=firstPage;i<=lastPage;i++){
             $scope.pageLabel.push(i);
         }

@@ -1,4 +1,5 @@
 package com.pinyougou.sellergoods.service.impl;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -43,7 +44,7 @@ public class GoodsServiceImpl implements GoodsService {
 
 	@Autowired
 	private TbGoodsMapper goodsMapper;
-	
+
 	/**
 	 * 查询全部
 	 */
@@ -57,23 +58,23 @@ public class GoodsServiceImpl implements GoodsService {
 	 */
 	@Override
 	public PageResult findPage(int pageNum, int pageSize) {
-		PageHelper.startPage(pageNum, pageSize);		
+		PageHelper.startPage(pageNum, pageSize);
 		Page<TbGoods> page=   (Page<TbGoods>) goodsMapper.selectByExample(null);
 		return new PageResult(page.getTotal(), page.getResult());
 	}
 
 	@Autowired
 	private TbGoodsDescMapper goodsDescMapper;
-	
+
 	@Autowired
 	private TbItemMapper itemMapper;
-	
+
 	@Autowired
 	private TbItemCatMapper itemCatMapper;
-	
+
 	@Autowired
 	private TbBrandMapper brandMapper;
-	
+
 	@Autowired
 	private TbSellerMapper sellerMapper;
 	/**
@@ -82,16 +83,16 @@ public class GoodsServiceImpl implements GoodsService {
 	@Override
 	public void add(Goods goods) {
 		goods.getGoods().setAuditStatus("0"); // 设置审核的状态
-		
+
 		goodsMapper.insert(goods.getGoods()); // 插入商品信息
-		
+
 		goods.getGoodsDesc().setGoodsId(goods.getGoods().getId());
-		
+
 		goodsDescMapper.insert(goods.getGoodsDesc()); // 插入商品的扩展信息
-		
+
 		setItemList(goods);
 	}
-	
+
 	private void setItemList(Goods goods){
 		if("1".equals(goods.getGoods().getIsEnableSpec())){
 			// 启用规格
@@ -106,23 +107,23 @@ public class GoodsServiceImpl implements GoodsService {
 					title+= " "+map.get(key);
 				}
 				item.setTitle(title);
-				
+
 				setValue(goods,item);
-				
+
 				itemMapper.insert(item);
 			}
 		}else{
 			// 没有启用规格
 			TbItem item = new TbItem();
-			
+
 			item.setTitle(goods.getGoods().getGoodsName());
-			
+
 			item.setPrice(goods.getGoods().getPrice());
-			
+
 			item.setNum(999);
-			
+
 			item.setStatus("0");
-			
+
 			item.setIsDefault("1");
 			item.setSpec("{}");
 			//item.setSpec(new HashMap());
@@ -136,7 +137,7 @@ public class GoodsServiceImpl implements GoodsService {
 		if(imageList.size()>0){
 			item.setImage((String)imageList.get(0).get("url"));
 		}
-		
+
 		// 保存三级分类的ID:
 		item.setCategoryid(goods.getGoods().getCategory3Id());
 		item.setCreateTime(new Date());
@@ -144,17 +145,17 @@ public class GoodsServiceImpl implements GoodsService {
 		// 设置商品ID
 		item.setGoodsId(goods.getGoods().getId());
 		item.setSellerId(goods.getGoods().getSellerId());
-		
+
 		TbItemCat itemCat = itemCatMapper.selectByPrimaryKey(goods.getGoods().getCategory3Id());
 		item.setCategory(itemCat.getName());
-		
+
 		TbBrand brand = brandMapper.selectByPrimaryKey(goods.getGoods().getBrandId());
 		item.setBrand(brand.getName());
-		
+
 		TbSeller seller = sellerMapper.selectByPrimaryKey(goods.getGoods().getSellerId());
 		item.setSeller(seller.getNickName());
 	}
-	
+
 	/**
 	 * 修改
 	 */
@@ -174,8 +175,8 @@ public class GoodsServiceImpl implements GoodsService {
 		itemMapper.deleteByExample(example);
 		// 保存SKU的信息
 		setItemList(goods);
-	}	
-	
+	}
+
 	/**
 	 * 根据ID获取实体
 	 * @param id
@@ -190,14 +191,14 @@ public class GoodsServiceImpl implements GoodsService {
 		// 查询商品扩展表的信息
 		TbGoodsDesc tbGoodsDesc = goodsDescMapper.selectByPrimaryKey(id);
 		goods.setGoodsDesc(tbGoodsDesc);
-		
+
 		// 查询SKU表的信息:
 		TbItemExample example = new TbItemExample();
 		com.pinyougou.pojo.TbItemExample.Criteria criteria = example.createCriteria();
 		criteria.andGoodsIdEqualTo(id);
 		List<TbItem> list = itemMapper.selectByExample(example);
 		goods.setItemList(list);
-		
+
 		return goods;
 	}
 
@@ -211,60 +212,76 @@ public class GoodsServiceImpl implements GoodsService {
 			TbGoods tbGoods = goodsMapper.selectByPrimaryKey(id);
 			tbGoods.setIsDelete("1");
 			goodsMapper.updateByPrimaryKey(tbGoods);
-		}		
+		}
 	}
-	
-	
-		@Override
+
+
+	@Override
 	public PageResult findPage(TbGoods goods, int pageNum, int pageSize) {
 		PageHelper.startPage(pageNum, pageSize);
-		
+
 		TbGoodsExample example=new TbGoodsExample();
 		Criteria criteria = example.createCriteria();
-		
+
 		criteria.andIsDeleteIsNull();
-		
-		if(goods!=null){			
-					if(goods.getSellerId()!=null && goods.getSellerId().length()>0){
-			criteria.andSellerIdEqualTo(goods.getSellerId());
-		}
-		if(goods.getGoodsName()!=null && goods.getGoodsName().length()>0){
-			criteria.andGoodsNameLike("%"+goods.getGoodsName()+"%");
-		}
-		if(goods.getAuditStatus()!=null && goods.getAuditStatus().length()>0){
-			criteria.andAuditStatusLike("%"+goods.getAuditStatus()+"%");
-		}
-		if(goods.getIsMarketable()!=null && goods.getIsMarketable().length()>0){
-			criteria.andIsMarketableLike("%"+goods.getIsMarketable()+"%");
-		}
-		if(goods.getCaption()!=null && goods.getCaption().length()>0){
-			criteria.andCaptionLike("%"+goods.getCaption()+"%");
-		}
-		if(goods.getSmallPic()!=null && goods.getSmallPic().length()>0){
-			criteria.andSmallPicLike("%"+goods.getSmallPic()+"%");
-		}
-		if(goods.getIsEnableSpec()!=null && goods.getIsEnableSpec().length()>0){
-			criteria.andIsEnableSpecLike("%"+goods.getIsEnableSpec()+"%");
-		}
-		if(goods.getIsDelete()!=null && goods.getIsDelete().length()>0){
-			criteria.andIsDeleteLike("%"+goods.getIsDelete()+"%");
-		}
+
+		if(goods!=null){
+			if(goods.getSellerId()!=null && goods.getSellerId().length()>0){
+				criteria.andSellerIdEqualTo(goods.getSellerId());
+			}
+			if(goods.getGoodsName()!=null && goods.getGoodsName().length()>0){
+				criteria.andGoodsNameLike("%"+goods.getGoodsName()+"%");
+			}
+			if(goods.getAuditStatus()!=null && goods.getAuditStatus().length()>0){
+				criteria.andAuditStatusLike("%"+goods.getAuditStatus()+"%");
+			}
+			if(goods.getIsMarketable()!=null && goods.getIsMarketable().length()>0){
+				criteria.andIsMarketableLike("%"+goods.getIsMarketable()+"%");
+			}
+			if(goods.getCaption()!=null && goods.getCaption().length()>0){
+				criteria.andCaptionLike("%"+goods.getCaption()+"%");
+			}
+			if(goods.getSmallPic()!=null && goods.getSmallPic().length()>0){
+				criteria.andSmallPicLike("%"+goods.getSmallPic()+"%");
+			}
+			if(goods.getIsEnableSpec()!=null && goods.getIsEnableSpec().length()>0){
+				criteria.andIsEnableSpecLike("%"+goods.getIsEnableSpec()+"%");
+			}
+			if(goods.getIsDelete()!=null && goods.getIsDelete().length()>0){
+				criteria.andIsDeleteLike("%"+goods.getIsDelete()+"%");
+			}
 
 		}
-		
-		Page<TbGoods> page= (Page<TbGoods>)goodsMapper.selectByExample(example);		
+
+		Page<TbGoods> page= (Page<TbGoods>)goodsMapper.selectByExample(example);
 		return new PageResult(page.getTotal(), page.getResult());
 	}
 
-		@Override
-		public void updateStatus(Long[] ids, String status) {
-			for (Long id : ids) {
-				TbGoods tbGoods = goodsMapper.selectByPrimaryKey(id);
-				
-				tbGoods.setAuditStatus(status);
-				
-				goodsMapper.updateByPrimaryKey(tbGoods);
-			}
+	@Override
+	public void updateStatus(Long[] ids, String status) {
+		for (Long id : ids) {
+			TbGoods tbGoods = goodsMapper.selectByPrimaryKey(id);
+
+			tbGoods.setAuditStatus(status);
+
+			goodsMapper.updateByPrimaryKey(tbGoods);
 		}
-	
+	}
+
+
+	/**
+	 * 根据SPU的ID集合查询SKU列表
+	 * @param goodsIds
+	 * @param status
+	 * @return
+	 */
+	public List<TbItem>	findItemListByGoodsIdListAndStatus(Long []goodsIds,String status){
+
+		TbItemExample example=new TbItemExample();
+		com.pinyougou.pojo.TbItemExample.Criteria criteria = example.createCriteria();
+		criteria.andStatusEqualTo(status);//状态
+		criteria.andGoodsIdIn( Arrays.asList(goodsIds));//指定条件：SPUID集合
+
+		return itemMapper.selectByExample(example);
+	}
 }
