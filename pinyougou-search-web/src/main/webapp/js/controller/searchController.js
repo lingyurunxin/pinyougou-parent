@@ -40,10 +40,10 @@ app.controller('searchController',function($scope,$location,searchService){
         }else{
             $scope.firstDot=false;//前面无点
             $scope.lastDot=false;//后边无点
-        }   
+        }
 
 
-        //构建页码
+        //构建页码  
         for(var i=firstPage;i<=lastPage;i++){
             $scope.pageLabel.push(i);
         }
