@@ -42,7 +42,7 @@ app.controller('searchController',function($scope,$location,searchService){
             $scope.lastDot=false;//后边无点
         }
 
-  
+   
         //构建页码
         for(var i=firstPage;i<=lastPage;i++){
             $scope.pageLabel.push(i);
