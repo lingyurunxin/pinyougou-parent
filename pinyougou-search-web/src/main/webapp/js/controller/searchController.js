@@ -15,7 +15,7 @@ app.controller('searchController',function($scope,$location,searchService){
             }
         );
     }
-
+ 
     //构建分页栏
     buildPageLabel=function(){
         //构建分页栏
