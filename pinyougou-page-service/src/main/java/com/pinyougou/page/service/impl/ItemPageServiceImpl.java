@@ -88,6 +88,7 @@ public class ItemPageServiceImpl implements ItemPageService {
 			Writer out=new FileWriter(pagedir+goodsId+".html");
 			
 			template.process(dataModel, out);//输出
+
 			out.close();
 			return true;
 			

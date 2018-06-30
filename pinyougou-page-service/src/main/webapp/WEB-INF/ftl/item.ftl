@@ -16,6 +16,8 @@
     <script type="text/javascript" src="plugins/angularjs/angular.min.js"> </script>
     <script type="text/javascript" src="js/base.js"> </script>
     <script type="text/javascript" src="js/controller/itemController.js"> </script>
+
+
     <script>
         var skuList=[
           <#list itemList as item>
