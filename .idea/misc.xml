@@ -19,8 +19,14 @@
         <option value="$PROJECT_DIR$/pinyougou-page-interface/pom.xml" />
         <option value="$PROJECT_DIR$/pinyougou-page-service/pom.xml" />
         <option value="$PROJECT_DIR$/pinyougou-page-web/pom.xml" />
+        <option value="$PROJECT_DIR$/jmsDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/springjms_consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/springjms_producer/pom.xml" />
       </list>
     </option>
+  </component>
+  <component name="ProjectResources">
+    <resource url="http://activemq.apache.org/schema/core" location="D:/dtd/activemq-core-5.13.4.xsd" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
