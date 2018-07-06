@@ -22,6 +22,7 @@
         <option value="$PROJECT_DIR$/jmsDemo/pom.xml" />
         <option value="$PROJECT_DIR$/springjms_consumer/pom.xml" />
         <option value="$PROJECT_DIR$/springjms_producer/pom.xml" />
+        <option value="$PROJECT_DIR$/springBootDemo/pom.xml" />
       </list>
     </option>
   </component>

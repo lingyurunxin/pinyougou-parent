@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-Title: springBootDemo
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: cn.itcast.demo
+Build-Jdk: 1.7.0_72
+Built-By: Administrator
+Created-By: Maven Integration for Eclipse
+Implementation-URL: http://projects.spring.io/spring-boot/springBootDe
+ mo/
+
