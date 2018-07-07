@@ -29,5 +29,11 @@
         <module name="springjms_producer" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="alicom-dysms-api" target="1.5" />
+      <module name="alicom-mns-receive-samples" target="1.6" />
+      <module name="aliyun-java-sdk-core" target="1.6" />
+      <module name="aliyun-java-sdk-dysmsapi" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
 </project>
