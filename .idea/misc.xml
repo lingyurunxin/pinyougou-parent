@@ -11,6 +11,8 @@
     <file type="web" url="file://$PROJECT_DIR$/pinyougou-search-web" />
     <file type="web" url="file://$PROJECT_DIR$/pinyougou-sellergoods-service" />
     <file type="web" url="file://$PROJECT_DIR$/pinyougou-shop-web" />
+    <file type="web" url="file://$PROJECT_DIR$/pinyougou-user-service" />
+    <file type="web" url="file://$PROJECT_DIR$/pinyougou-user-web" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -23,6 +25,9 @@
         <option value="$PROJECT_DIR$/springjms_consumer/pom.xml" />
         <option value="$PROJECT_DIR$/springjms_producer/pom.xml" />
         <option value="$PROJECT_DIR$/springBootDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/pinyougou-user-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/pinyougou-user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/pinyougou-user-web/pom.xml" />
       </list>
     </option>
   </component>

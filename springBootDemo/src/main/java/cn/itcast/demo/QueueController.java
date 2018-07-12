@@ -28,10 +28,10 @@ public class QueueController {
 	@RequestMapping("/sendmap")
 	public void sendMap(){
 		Map map=new HashMap<>();
-		map.put("mobile", "13683391759");
-		map.put("template_code", "SMS_86640114");
-		map.put("sign_name","黑马");
-		map.put("param", "{\"name\":\"小蔡\"}");
+		map.put("mobile", "17326038122");
+		map.put("template_code", "SMS_139235700");
+		map.put("sign_name","李远锋品优购测试");
+		map.put("param", "{\"name\":\"李远锋\"}");
 		
 		jmsMessagingTemplate.convertAndSend("sms", map);
 	}
