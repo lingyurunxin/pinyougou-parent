@@ -73,6 +73,7 @@ com\pinyougou\pojo\TbOrderItemExample$Criteria.class
 com\pinyougou\pojo\TbOrderExample$Criterion.class
 com\pinyougou\pojo\TbProvincesExample$Criterion.class
 com\pinyougou\pojo\TbProvinces.class
+com\pinyougou\pojo\group\Cart.class
 com\pinyougou\pojo\TbItemExample$Criterion.class
 com\pinyougou\pojo\TbGoodsDescExample$GeneratedCriteria.class
 com\pinyougou\pojo\group\Goods.class

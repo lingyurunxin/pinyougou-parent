@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/pinyougou-cart-service" />
+    <file type="web" url="file://$PROJECT_DIR$/pinyougou-cart-web" />
     <file type="web" url="file://$PROJECT_DIR$/pinyougou-content-service" />
     <file type="web" url="file://$PROJECT_DIR$/pinyougou-manager-web" />
     <file type="web" url="file://$PROJECT_DIR$/pinyougou-page-service" />
@@ -28,6 +30,9 @@
         <option value="$PROJECT_DIR$/pinyougou-user-interface/pom.xml" />
         <option value="$PROJECT_DIR$/pinyougou-user-service/pom.xml" />
         <option value="$PROJECT_DIR$/pinyougou-user-web/pom.xml" />
+        <option value="$PROJECT_DIR$/pinyougou-cart-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/pinyougou-cart-service/pom.xml" />
+        <option value="$PROJECT_DIR$/pinyougou-cart-web/pom.xml" />
       </list>
     </option>
   </component>
