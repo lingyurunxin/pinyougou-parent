@@ -9,6 +9,7 @@
     <file type="web" url="file://$PROJECT_DIR$/pinyougou-order-service" />
     <file type="web" url="file://$PROJECT_DIR$/pinyougou-page-service" />
     <file type="web" url="file://$PROJECT_DIR$/pinyougou-page-web" />
+    <file type="web" url="file://$PROJECT_DIR$/pinyougou-pay-service" />
     <file type="web" url="file://$PROJECT_DIR$/pinyougou-portal-web" />
     <file type="web" url="file://$PROJECT_DIR$/pinyougou-search-service" />
     <file type="web" url="file://$PROJECT_DIR$/pinyougou-search-web" />
@@ -36,6 +37,8 @@
         <option value="$PROJECT_DIR$/pinyougou-cart-web/pom.xml" />
         <option value="$PROJECT_DIR$/pinyougou-order-interface/pom.xml" />
         <option value="$PROJECT_DIR$/pinyougou-order-service/pom.xml" />
+        <option value="$PROJECT_DIR$/pinyougou-pay-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/pinyougou-pay-service/pom.xml" />
       </list>
     </option>
   </component>
