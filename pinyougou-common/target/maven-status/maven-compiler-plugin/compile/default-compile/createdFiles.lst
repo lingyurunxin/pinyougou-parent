@@ -1,3 +1,6 @@
 util\FastDFSClient.class
 util\CookieUtil.class
+util\HttpClient$1.class
+util\HttpClient.class
+util\IdWorker.class
 util\PhoneFormatCheckUtils.class
