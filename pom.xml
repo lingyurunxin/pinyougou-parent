@@ -31,6 +31,9 @@
         <module>pinyougou-cart-web</module>
         <module>pinyougou-order-interface</module>
         <module>pinyougou-order-service</module>
+        <module>pinyougou-seckill-interface</module>
+        <module>pinyougou-seckill-web</module>
+        <module>pinyougou-seckill-service</module>
 
 
     </modules>
