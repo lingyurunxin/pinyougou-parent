@@ -8,12 +8,15 @@ import java.io.Serializable;
  *
  */
 public class Result implements Serializable{
+
+	private boolean success;
 	private boolean flag;
 	private String message;
-	
-	public Result(boolean flag, String message) {
+
+	public Result(boolean success, String message) {
 		super();
-		this.flag = flag;
+		this.success=success;
+		this.flag = success;
 		this.message = message;
 	}
 	public boolean isFlag() {
@@ -28,6 +31,12 @@ public class Result implements Serializable{
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	
-	
+
+	public boolean isSuccess() {
+		return success;
+	}
+	public void setSuccess(boolean success) {
+		this.success = success;
+	}
+
 }
